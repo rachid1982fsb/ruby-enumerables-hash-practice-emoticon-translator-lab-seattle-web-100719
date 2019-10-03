@@ -2,6 +2,7 @@
 require "yaml"
 link_yml= './lib/emoticons.yml'
 
+<<<<<<< HEAD
 
 
 def load_library(path)
@@ -17,9 +18,15 @@ end
 
 def load_library2(path)
   emoticons = YAML.load_file(path)
+=======
+def load_library(path)
+  # code goes here
+   emoticons = YAML.load_file(path)
+>>>>>>> f4c3656ca67cf8d6b10d5f9edbff7f85453143a3
 end
   
 
+<<<<<<< HEAD
 
 
 def get_japanese_emoticon(path, t_w_emoticon)
@@ -38,3 +45,21 @@ def get_english_meaning(path, j_emoticon)
   emoticon_meaning
 end
 
+=======
+def get_japanese_emoticon(path, t_w_emoticon)
+  # code goes here
+  emoticons=load_library(path)
+  j_emoticon=""
+  emoticons.each_value { |array_emo|  j_emoticon=array_emo[1] if t_w_emoticon==array_emo[0]}
+  puts j_emoticon
+end
+
+def get_english_meaning(j_emoticon)
+  # code goes here
+  emoticons=load_library
+  j_emoticon=""
+end
+
+puts load_library(link_yml)
+puts get_japanese_emoticon(link_yml,)
+>>>>>>> f4c3656ca67cf8d6b10d5f9edbff7f85453143a3
